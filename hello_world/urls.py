@@ -22,4 +22,6 @@ urlpatterns = [
     path("", core_views.index),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
+    # Add Django site authentication urls (for login, logout, password management)
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
